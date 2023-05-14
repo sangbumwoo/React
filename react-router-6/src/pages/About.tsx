@@ -8,12 +8,13 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = props => {
     const { number } = useParams();
 
     useEffect(() => {
+        console.log('------>', number);
         if (number) {
             setMessage('the number is ' + number);
         } else {
             setMessage('No number was provided');
         }
-    }, []);
+    }, [number]);
 
     return <div>
         <p>About page</p>

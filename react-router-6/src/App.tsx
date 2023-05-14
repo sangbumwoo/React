@@ -12,11 +12,16 @@ const AppPage: React.FunctionComponent<IAppPageProps> = (props) => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about">
-                    <Route index element={<AboutPage />} />
-                    <Route path=":number" element={<AboutPage />} />
+                <Route path="/" element={<LayoutComponent />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="/about">
+                        <Route index element={<AboutPage />} />
+                        <Route path=":number" element={<AboutPage />} />
+                    </Route>
+                    <Route path="/todo" element={<TodoPage />}></Route>
+                    <Route path="/todo-with-recoil" element={<TodoWithRecoilPage />}></Route>
                 </Route>
+                {/*
                 <Route path="/layout" element={<LayoutComponent />}>
                     <Route index element={<AboutPage />} />
                     <Route path=":number" element={<AboutPage />} />
@@ -26,7 +31,7 @@ const AppPage: React.FunctionComponent<IAppPageProps> = (props) => {
                 </Route>
                 <Route path="/todo-with-recoil" element={<LayoutComponent />}>
                     <Route index element={<TodoWithRecoilPage />} />
-                </Route>
+                </Route> */}
             </Routes>
         </BrowserRouter>
     );
