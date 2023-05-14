@@ -2,8 +2,8 @@ import React from 'react';
 import TodoItem from './TodoItem';
 
 export interface ITodoBoardComponentProps {
-    todoList: string[],
-    deleteItem: any,
+    todoList: string[];
+    deleteItem(index: number): void;
 }; 
 
 const TodoBoardComponent: React.FunctionComponent<ITodoBoardComponentProps> = ({todoList, deleteItem}) => {

@@ -4,9 +4,10 @@ import TodoBoardComponent from '../components/TodoBoard';
 export interface ITodoPageProps {}
 
 const TodoPage: React.FunctionComponent<ITodoPageProps> = (props) => {
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState<string>('');
     const [todoList, setTodoList] = useState<string[]>([]);
-    const onChange = (e: any) => {
+
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
     };
 

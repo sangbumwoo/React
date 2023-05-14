@@ -3,7 +3,7 @@ import React from 'react';
 export interface ITodoItemComponentProps {
     todoItem: string;
     todoItemIndex: number;
-    deleteItem: any;
+    deleteItem(index:number): void;
 }
 
 const TodoItemComponent: React.FunctionComponent<ITodoItemComponentProps> = ({todoItem, deleteItem, todoItemIndex}) => {
