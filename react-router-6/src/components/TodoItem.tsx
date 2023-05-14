@@ -6,10 +6,10 @@ export interface ITodoItemComponentProps {
     deleteItem: any;
 }
 
-const TodoItemComponent: React.FunctionComponent<ITodoItemComponentProps> = (props) => {
+const TodoItemComponent: React.FunctionComponent<ITodoItemComponentProps> = ({todoItem, deleteItem, todoItemIndex}) => {
     return (
         <div className="todo-item d-flex justify-content-between">
-            {props.todoItem} <button onClick={() => props.deleteItem(props.todoItemIndex)}>삭제</button>
+            {todoItem} <button onClick={() => deleteItem(todoItemIndex)}>삭제</button>
         </div>
     );
 };

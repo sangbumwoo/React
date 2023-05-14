@@ -6,12 +6,12 @@ export interface ITodoBoardComponentProps {
     deleteItem: any,
 }; 
 
-const TodoBoardComponent: React.FunctionComponent<ITodoBoardComponentProps> = props => {
+const TodoBoardComponent: React.FunctionComponent<ITodoBoardComponentProps> = ({todoList, deleteItem}) => {
     return (
         <div>
             <h1>Todo List</h1>
-            {props.todoList.map((item, index) => (
-                <TodoItem key={Date.now() + index} deleteItem={props.deleteItem} todoItem={item} todoItemIndex={index} />
+            {todoList.map((item, index) => (
+                <TodoItem key={Date.now() + index} deleteItem={deleteItem} todoItem={item} todoItemIndex={index} />
             ))}
         </div>
     );
