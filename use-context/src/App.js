@@ -16,7 +16,6 @@ function App() {
     <div className="App">
         <h1>HI</h1>
         <Children />
-        
     </div>
 
     </AppContext.Provider>
